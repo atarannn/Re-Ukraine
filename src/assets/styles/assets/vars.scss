@@ -1,0 +1,45 @@
+$default-font: "e-Ukraine", sans-serif;
+
+$wc: #fff;
+$bc: #121212;
+$mc: #6B9CF0;
+$mc2: #FFD801;
+$grey: #8E8E8E;
+$light-grey: #D1D1D1;
+
+
+
+$light: #FCFCFC;
+$dark: #1A2941;
+$gold: #CFA46E;
+
+:root {
+  --default-font-1: 100px;
+  --default-font-2: 60px;
+  --default-font-3: 25px;
+  --default-font-4: 20px;
+  --default-font-5: 18px;
+  --default-font-6: 16px;
+  --default-font-7: 14px;
+
+  --logo-w: 132px;
+  --logo-h: 40px;
+
+  --header-h: 100px;
+
+  --field: 70px;
+
+  --inner-block-margin: 200px;
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+
+    --logo-w: 87px;
+    --logo-h: 26px;
+
+    --header-h: 60px;
+
+    --field: 20px;
+  }
+}
