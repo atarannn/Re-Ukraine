@@ -8,7 +8,7 @@
   height: var(--header-h);
   background: $bc;
 
-  @include to(640px) {
+  @include to(768px) {
     background: #000;
   }
 
@@ -17,13 +17,13 @@
   justify-content: space-between;
 
   &-menu-icon {
-    background: #C4C4C4;
-    border-radius: 100%;
-    height: 22px;
-    width: 22px;
+    display: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
 
-    @include from(640px) {
-      display: none;
+    @include to(768px) {
+      display: flex;
     }
   }
 
@@ -48,10 +48,18 @@
 
       a {
         @include regular-font($wc, var(--default-font-7));
+        transition: color 0.3s ease-in-out;
+
+        @include from(1024px) {
+          &:hover {
+            color: $mc;
+            transition: color 0.3s ease-in-out;
+          }
+        }
       }
     }
 
-    @include to(640px) {
+    @include to(768px) {
       display: none;
     }
   }
@@ -71,11 +79,25 @@
 
     span {
       @include regular-font($mc2, var(--default-font-6));
+      transition: color 0.3s ease-in-out;
+    }
+
+    @include from(1024px) {
+      &:hover {
+        span {
+          color: $wc;
+          transition: color 0.3s ease-in-out;
+        }
+      }
+    }
+
+    @include to(768px) {
+      height: 50px;
     }
   }
 
-  &-btn.desktop {
-    @include to(640px) {
+  &-btn.btn-desktop {
+    @include to(768px) {
       display: none;
     }
   }
@@ -85,7 +107,7 @@
     align-items: center;
     border-bottom: 1px solid #20304D;
 
-    @include to(640px) {
+    @include to(768px) {
       justify-content: flex-end;
     }
   }

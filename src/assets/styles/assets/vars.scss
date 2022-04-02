@@ -32,8 +32,16 @@ $gold: #CFA46E;
   --inner-block-margin: 200px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   :root {
+    --default-font-1: 50px;
+    --default-font-2: 35px;
+    --default-font-3: 18px;
+    --default-font-4: 13px;
+
+    --default-font-5: 16px;
+    --default-font-6: 13px;
+    --default-font-7: 13px;
 
     --logo-w: 87px;
     --logo-h: 26px;
@@ -41,5 +49,7 @@ $gold: #CFA46E;
     --header-h: 60px;
 
     --field: 20px;
+
+    --inner-block-margin: 100px;
   }
 }

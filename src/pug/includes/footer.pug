@@ -1,45 +1,83 @@
+.section-margin-bottom.footer-form.relative
+    .row
+        .section-9-img
+            img(src="assets/images/footer/4.png").border-radius.mob-img1
+        .section-9-img
+            img(src="assets/images/footer/5.png").border-radius.mob-img2
+    .row.field.mob-footer-margin
+        .section-9-img
+            img(src="assets/images/footer/6.png").border-radius.mob-img2
+        .section-9-img
+            img(src="assets/images/footer/7.png").border-radius.mob-img1
+    .form
+        img(src="assets/images/vector-4.svg").uk-pattern-5
+        form(data-home-contact autocomplete="off")
+            .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+                input(type='text' name="name" placeholder="Назва організації").form-field__input
+                .form-field-message Назва організації
+                .input-message(data-input-message)
+
+            .form-field.form-field-input(data-field-input data-field-city data-status="field--inactive")
+                input(type='text' name="city" placeholder="Місто знаходження").form-field__input
+                .form-field-message Місто знаходження
+                .input-message(data-input-message)
+
+            .form-field.form-field-input(data-field-input data-field-mail data-status="field--inactive")
+                input(type='text' name="mail" placeholder="E-mail").form-field__input
+                .form-field-message E-mail
+                .input-message(data-input-message)
+
+            .form-checkbox__wrapper
+                label.form-checkbox Я прочитав(-ла) і приймаю Політика конфіденційності
+                    input(type="checkbox" checked="checked")
+                    span.checkmark
+
+            button( type="submit" data-btn-submit).btn-style
+                span(data-btn-submit-text).link__text.usn Приєднатися
+
 footer.footer
-    .footer-top-wrapper.field.row
+    .footer-top-wrapper.field.row.column
         .left-block30
             img(src="assets/images/big-logo.svg").footer-logo
-        .right-block70.row
+        .right-block70.row.column.top-mob-footer-margin
             .footer-top-right-block.col
-                .block
+                .block.block-mob-1
                     .regular-text Волонтерський бізнес-рух небайдужих підприємців, що підтримують відновлення мирної України
-                    a(href="#" data-help-btn).header-btn.desktop
+                    a(href="https://www.patreon.com/reukraine" data-help-btn).header-btn.mob-font-size
                         span Підтримати команду
-                .block
+                .block.block-mob-1
                     .regular-text Стань нашим координатором
-                    a(href="#" data-join-btn).btn-style
+                    a(href="#" data-join-btn).btn-style.mob-font-size
                         span Приєднатися до команди
-            .footer-top-left-block.col
+            .footer-top-left-block.col.mob-row
                 .block
                     ul.nav-list
                         li
-                            a(href="#").regular-text Наша ініціатива
+                            a(href="about.html").regular-text Наша ініціатива
                         li
-                            a(href="#").regular-text Учасники
+                            a(href="partners.html").regular-text Учасники
                         li
-                            a(href="#").regular-text Зворотній зв'язок
+                            a(href="mailto:help@reukraine.com").regular-text Зворотній зв'язок
                         li
                             a(href="#").regular-text FAQ
                 .block
                     .bold-text Контакти
-                    .email-text help@reukraine.com
+                    a(href="mailto:help@reukraine.com").email-text help@reukraine.com
 
 
     .footer-bottom-wrapper.field
-        img(src="assets/images/vector-5.svg")
-        .footer-bottom
-            .footer-bottom-left.row
+        img(src="assets/images/vector-5.svg").desktop
+        img(src="assets/images/vector-mob-5.svg").mobile
+        .footer-bottom.column-reverse
+            .footer-bottom-left.row.column-reverse
                 .white-text © 2022
                 .footer-bottom-left-text Політика конфіденційності
             ul.social-network.row
                 li
-                    a(href="#").white-text patreon
+                    a(href="https://www.patreon.com/reukraine").white-text patreon
                 li
-                    a(href="#").white-text FACEBOOK
+                    a(href="https://www.facebook.com/reukraine.real").white-text FACEBOOK
                 li
-                    a(href="#").white-text INSTAGRAM
+                    a(href="https://instagram.com/reukraine.real").white-text INSTAGRAM
 
 

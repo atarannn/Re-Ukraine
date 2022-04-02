@@ -20,7 +20,7 @@ form {
 
 .form-field:not(#t) {
   position: relative;
-  margin: 40px 0 0;
+  margin: 45px 0 0;
   background: none;
   border-bottom: 1px solid #0F1C32;
   transition: all 0.3s;
@@ -128,7 +128,7 @@ form {
   width: 65px;
   height: 100%;
   z-index: 10;
-  background-color: red;
+  background-color: #F47070;
   opacity: 0;
   @include to(1440px) {
     width: 45px;
@@ -204,16 +204,16 @@ form {
 }
 
 [data-field-input][data-status="field--error"]:not(#r) {
-  border-color: #EA4041;
+  border-color: #F47070;
   .input-message {
-    color: #EA4041;
+    color: #F47070;
   }
 }
 
 [data-field-input][data-status="field--success"]:not(#r) {
-  border-color: #96C480;
+  border-color: #61CE70;
   .input-message {
-    color: #96C480;
+    color: #61CE70;
   }
 }
 
@@ -350,7 +350,7 @@ form {
 
 
 .form-checkbox__wrapper{
-  margin-top: 20px;
+  margin-top: 30px;
   width: 100%;
   display: flex;
   align-items: flex-start;

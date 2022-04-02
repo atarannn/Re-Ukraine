@@ -14,14 +14,14 @@ global.gsap = gsap;
 global.axios = axios;
 
 /* eslint-disable-next-line */
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true,
-  smoothMobile: false,
-  inertia: 1.1,
-});
-
-global.locoScroll = locoScroll;
+// const locoScroll = new LocomotiveScroll({
+//   el: document.querySelector('[data-scroll-container]'),
+//   smooth: true,
+//   smoothMobile: false,
+//   inertia: 1.1,
+// });
+//
+// global.locoScroll = locoScroll;
 
 const forms = [
   '[data-home-contact]',
@@ -49,18 +49,32 @@ formsWithRedirect.forEach((form) => {
             valid: false,
             error: [],
           },
-
-          phone: {
-            inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-phone]'), typeInput: 'phone' }),
-            rule: yup
-              .string()
-              .required(i18next.t('required'))
-              .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
-
-            defaultMessage: i18next.t('phone'),
+          city: {
+            inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-city]') }),
+            rule: yup.string().required(i18next.t('required')).trim(),
+            defaultMessage: i18next.t('city'),
             valid: false,
             error: [],
           },
+          mail: {
+            inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-mail]') }),
+            rule: yup.string().required(i18next.t('required')).trim(),
+            defaultMessage: i18next.t('mail'),
+            valid: false,
+            error: [],
+          },
+
+          // phone: {
+          //   inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-phone]'), typeInput: 'phone' }),
+          //   rule: yup
+          //     .string()
+          //     .required(i18next.t('required'))
+          //     .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
+          //
+          //   defaultMessage: i18next.t('phone'),
+          //   valid: false,
+          //   error: [],
+          // },
         },
 
       },
@@ -91,46 +105,64 @@ forms.forEach((form) => {
             valid: false,
             error: [],
           },
-
-          phone: {
-            inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-phone]'), typeInput: 'phone' }),
-            rule: yup
-              .string()
-              .required(i18next.t('required'))
-              .min(17, i18next.t('field_too_short', { cnt: 17 - 5 })),
-
-            defaultMessage: i18next.t('phone'),
+          city: {
+            inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-city]') }),
+            rule: yup.string().required(i18next.t('required')).trim(),
+            defaultMessage: i18next.t('city'),
             valid: false,
             error: [],
           },
+          mail: {
+            inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-mail]') }),
+            rule: yup.string().required(i18next.t('required')).trim(),
+            defaultMessage: i18next.t('mail'),
+            valid: false,
+            error: [],
+          },
+
+          // phone: {
+          //   inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-phone]'), typeInput: 'phone' }),
+          //   rule: yup
+          //     .string()
+          //     .required(i18next.t('required'))
+          //     .min(17, i18next.t('field_too_short', { cnt: 17 - 5 })),
+          //
+          //   defaultMessage: i18next.t('phone'),
+          //   valid: false,
+          //   error: [],
+          // },
         },
 
       },
     });
 
-    $form.querySelector('.js-mask-absolute').addEventListener('click', () => {
-      $form.querySelector('[name="phone"]').focus();
-    }, false);
+    // $form.querySelector('.js-mask-absolute').addEventListener('click', () => {
+    //   $form.querySelector('[name="phone"]').focus();
+    // }, false);
   }
 });
 
 /*
  * form handlers end
  */
-function disableScroll() {
-  const containersScroll = document.querySelectorAll('[data-disable-page-scroll]');
-  containersScroll.forEach((block) => {
-    block.addEventListener('mouseenter', () => {
-      locoScroll.stop();
-    });
-    block.addEventListener('mouseleave', () => {
-      locoScroll.start();
-    });
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  disableScroll();
-  window.locoScroll.update();
-});
+// function disableScroll() {
+//   const containersScroll = document.querySelectorAll('[data-disable-page-scroll]');
+//   containersScroll.forEach((block) => {
+//     block.addEventListener('mouseenter', () => {
+//       locoScroll.stop();
+//     });
+//     block.addEventListener('mouseleave', () => {
+//       locoScroll.start();
+//     });
+//   });
+// }
+//
+// document.addEventListener('DOMContentLoaded', () => {
+//   // disableScroll();
+//   window.locoScroll.update();
+// });
+// window.addEventListener('load', () => {
+//   // disableScroll();
+//   window.locoScroll.update();
+// });
 /** ******************************* */

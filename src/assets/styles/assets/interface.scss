@@ -109,6 +109,16 @@ a {
   display: flex;
 }
 
+@include to(768px) {
+  .column{
+    flex-direction: column;
+  }
+
+  .column-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
 .field {
   padding-left: var(--field);
   padding-right: var(--field);
@@ -125,11 +135,19 @@ a {
 .left-block30 {
   width: 30%;
   height: 100%;
+
+  @include to(768px) {
+    width: 100%;
+  }
 }
 
 .right-block70 {
   width: 70%;
   height: 100%;
+
+  @include to(768px) {
+    width: 100%;
+  }
 }
 
 .grey-text {
@@ -178,6 +196,26 @@ a {
       max-width: 85%;
     }
   }
+
+  @include to(768px) {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 40px;
+
+    li {
+      padding-left: 20px;
+      width: 50%;
+
+      .light-grey-text {
+        margin-top: 40px;
+        max-width: 100%;
+      }
+
+      &:nth-child(even) {
+        margin-left: auto;
+      }
+    }
+  }
 }
 
 .relative {
@@ -189,6 +227,7 @@ a {
   height: 62px;
   background: $mc;
   border-radius: 5px;
+  text-align: center;
 
   display: flex;
   align-items: center;
@@ -196,8 +235,24 @@ a {
 
   cursor: pointer;
 
+
   span {
     @include regular-font($wc, var(--default-font-5));
+    transition: color 0.3s ease-in-out;
+  }
+
+  @include from(1024px) {
+    &:hover {
+      span {
+        color: $bc;
+        transition: color 0.3s ease-in-out;
+      }
+    }
+  }
+
+  @include to(768px) {
+    width: 165px;
+    height: 50px;
   }
 }
 
@@ -205,9 +260,36 @@ a {
   @include bold-font($wc, var(--default-font-3));
   text-align: right;
   margin-bottom: 10px;
+
+  @include to(768px) {
+    text-align: left;
+    margin-bottom: 0;
+  }
 }
 
 .regular-text {
   @include regular-font($wc, var(--default-font-6));
   text-align: right;
+
+  @include to(768px) {
+    text-align: left;
+  }
+}
+
+.margin-top {
+  margin-top: calc(var(--header-h) + 100px);
+
+  @include to(768px) {
+    margin-top: calc(var(--header-h) + 80px);
+  }
+}
+
+.text-svg {
+  margin: -7px .5em;
+
+  @include to(768px) {
+    height: 40px;
+    width: 44px;
+    margin: -7px .3em;
+  }
 }
