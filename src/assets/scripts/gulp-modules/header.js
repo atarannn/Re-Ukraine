@@ -1,12 +1,10 @@
 
 function menuOpen() {
   menuOpenAnim();
-  document.querySelector('body').style.overflow = 'hidden';
 }
 
 function menuClose() {
   menuCloseAnim();
-  document.querySelector('body').style.overflow = 'auto';
 }
 
 function menuOpenAnim(evt, reverseArg) {

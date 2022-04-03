@@ -1,20 +1,15 @@
 $('.section-8 .regular-text').hide();
 $('.fag-card-text').on('click', function(e){
   $(this).next('.section-8 .regular-text').slideToggle();
-  $(this).find('.faq-card-icon').toggleClass('faq-card-icon-rotate');
 });
 
-const slider = new Swiper('.partner-swiper', {
+const slider = new Swiper('.swiper', {
   loop: false,
-  slidesPerView: 1.4,
-  spaceBetween: 40,
-  navigation: {
-    nextEl: document.querySelector('[data-next]'),
-    prevEl: document.querySelector('[data-prev]'),
+  speed: 1000,
+  spaceBetween: 20,
+  width: 320,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
   },
-  preloadImages: false,
-  lazy: true,
-  speed: 400,
-  watchSlidesVisibility: true,
 });
-
