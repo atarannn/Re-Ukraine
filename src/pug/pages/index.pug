@@ -85,7 +85,23 @@ block content
   .section-margin-bottom.section-4.field
     .section-4-block-mob
       .white-title Наші учасники
+      .section-partner.mobile
+        .swiper-1.swiper.relative
+          .swiper-wrapper.partner-swiper-wrapper
+            a(href="#").swiper-slide.section-partner-card.first-partner-card
+              span.first-partner Будь першим
+              img(src="assets/images/home/back/2-2.svg")
 
+            a(href="#").swiper-slide.section-partner-card.default-partner-card
+              img(src="assets/images/home/back/2-2.svg")
+
+            a(href="#").swiper-slide.section-partner-card.default-partner-card
+              img(src="assets/images/home/back/2-2.svg")
+
+            a(href="#").swiper-slide.section-partner-card.default-partner-card
+              img(src="assets/images/home/back/2-2.svg")
+
+          .swiper-pagination
 
       a(href="#" data-join-btn).btn-style
         span Приєднатися
@@ -180,11 +196,49 @@ block content
             .light-grey-text Розкажи всім  у соціальних мережах
           li 04
             .light-grey-text Надішли 1% на офіційні рахунки України
+  .section-margin-bottom.footer-form.relative
+    .row
+      .section-9-img
+        img(src="assets/images/footer/4.png").border-radius.mob-img1
+      .section-9-img
+        img(src="assets/images/footer/5.png").border-radius.mob-img2
+    .row.field.mob-footer-margin
+      .section-9-img
+        img(src="assets/images/footer/6.png").border-radius.mob-img2
+      .section-9-img
+        img(src="assets/images/footer/7.png").border-radius.mob-img1
+    .form
+      img(src="assets/images/vector-4.svg").uk-pattern-5
+      form(data-home-contact autocomplete="off")
+        .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+          input(type='text' name="name" placeholder="Назва організації").form-field__input
+          .form-field-message Назва організації
+          .input-message(data-input-message)
+
+        .form-field.form-field-input(data-field-input data-field-city data-status="field--inactive")
+          input(type='text' name="city" placeholder="Місто знаходження").form-field__input
+          .form-field-message Місто знаходження
+          .input-message(data-input-message)
+
+        .form-field.form-field-input(data-field-input data-field-mail data-status="field--inactive")
+          input(type='text' name="mail" placeholder="E-mail").form-field__input
+          .form-field-message E-mail
+          .input-message(data-input-message)
+
+        .form-checkbox__wrapper
+          label.form-checkbox Я прочитав(-ла) і приймаю
+            a(href="privacy.html").link Політика конфіденційності
+            input(type="checkbox" checked="checked")
+            span.checkmark
+
+        button( type="submit" data-btn-submit).btn-style
+          span(data-btn-submit-text).link__text.usn Приєднатися
+
   .section-margin-bottom.section-8
     .field
       .white-title FAQ
       .faq-cards-wrapper.row.mobile
-        .swiper.relative
+        .swiper.swiper-2.relative
           .swiper-wrapper
             .swiper-slide.faq-card
               .fag-card-text.row
