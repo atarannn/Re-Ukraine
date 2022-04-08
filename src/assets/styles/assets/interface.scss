@@ -150,6 +150,15 @@ a {
   }
 }
 
+.block50 {
+  width: 50%;
+  height: 100%;
+
+  @include to(768px) {
+    width: 100%;
+  }
+}
+
 .grey-text {
   @include regular-font($grey, var(--default-font-7));
   max-width: 236px;
@@ -222,12 +231,12 @@ a {
   position: relative;
 }
 
-.btn-style {
-  width: 250px;
-  height: 62px;
-  background: $mc;
+.donate-btn {
+  height: 60px;
+  background: $mc2;
   border-radius: 5px;
   text-align: center;
+  padding: 0 22px;
 
   display: flex;
   align-items: center;
@@ -235,6 +244,39 @@ a {
 
   cursor: pointer;
 
+  span {
+    @include regular-font($bc, var(--default-font-5));
+    transition: color 0.3s ease-in-out;
+  }
+
+  @include from(1024px) {
+    &:hover {
+      span {
+        color: $bc;
+        transition: color 0.3s ease-in-out;
+      }
+    }
+  }
+
+  @include to(768px) {
+    height: 50px;
+  }
+}
+
+.btn-style {
+  height: 60px;
+  background: $mc;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0 22px;
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 1;
 
   span {
     @include regular-font($wc, var(--default-font-5));
@@ -251,7 +293,6 @@ a {
   }
 
   @include to(768px) {
-    width: 165px;
     height: 50px;
   }
 }
@@ -295,7 +336,7 @@ a {
 }
 
 .link {
-  color: $mc;
+  color: $mc!important;
 }
 
 .footer-form {
@@ -328,16 +369,25 @@ a {
     right: 50%;
     transform: translate(50%, -50%);
 
-    background: url(../images/home/back/4.svg) center no-repeat;
+    background-image: url(../images/home/back/4.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     backdrop-filter: blur(11px);
     border-radius: 5px;
-    padding: 60px 40px;
+    padding: 40px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include to(768px) {
+      background-image: url(../images/home/back/4-2.svg);
+      padding: 35px 20px;
+      height: 465px;
+      width: 320px;
+    }
 
     .btn-style {
       width: 100%;
@@ -345,19 +395,21 @@ a {
       border: 1px solid $mc;
 
       @include to(768px) {
-        width: 165px;
+        width: auto;
         margin-left: 0;
       }
-    }
-
-    @include to(768px) {
-      padding: 50px 20px;
-      height: auto;
-      width: 320px;
     }
   }
 
   .uk-pattern-5 {
     margin-bottom: 40px;
+  }
+}
+
+.margin30 {
+  margin-right: 30px;
+
+  @include to(768px) {
+    margin-right: 20px;
   }
 }

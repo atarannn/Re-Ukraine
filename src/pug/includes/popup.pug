@@ -1,0 +1,31 @@
+.popup(data-form)
+    .header-menu-close-icon(data-close-form)
+        span
+        span
+    .footer-form
+        .form
+            img(src="assets/images/vector-4.svg").uk-pattern-5
+            form(data-home-contact autocomplete="off")
+                .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+                    input(type='text' name="name" placeholder="Назва організації").form-field__input
+                    .form-field-message Назва організації
+                    .input-message(data-input-message)
+
+                .form-field.form-field-input(data-field-input data-field-city data-status="field--inactive")
+                    input(type='text' name="city" placeholder="Місто знаходження").form-field__input
+                    .form-field-message Місто знаходження
+                    .input-message(data-input-message)
+
+                .form-field.form-field-input(data-field-input data-field-mail data-status="field--inactive")
+                    input(type='text' name="mail" placeholder="E-mail").form-field__input
+                    .form-field-message E-mail
+                    .input-message(data-input-message)
+
+                .form-checkbox__wrapper
+                    label.form-checkbox Я прочитав(-ла) і приймаю
+                        a(href="privacy.html").link Політика конфіденційності
+                        input(type="checkbox" checked="checked")
+                        span.checkmark
+
+                button( type="submit" data-btn-submit).btn-style
+                    span(data-btn-submit-text).link__text.usn Приєднатися

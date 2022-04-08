@@ -25,6 +25,7 @@ global.axios = axios;
 
 const forms = [
   '[data-home-contact]',
+  '[data-footer-contact]',
 ];
 const formsWithRedirect = [
   '[data-popup-form]',

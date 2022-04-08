@@ -44,7 +44,7 @@ function homeAnimationAdditional() {
     });
   }
 
-  splitToLinesAndFadeUp('.section-4-block-mob .white-title, .section-1-title, .section-1 .white-text, .section-1 .grey-text, .section-2-title .yellow-title, .section-2-title .white-title, .section-partner-text .white-title, .section-7 .yellow-title, .section-8 .white-title, h1.white-title, .about-section-2 .white-title, .about-section-2-title, .about-section-3 .white-title, .about-section-4 .white-title, .about-section-4 .yellow-title, .class-page-partners .white-title');
+  splitToLinesAndFadeUp('.section-1-title, .section-1-text-block-top .white-text, .section-2 .white-title, .section-4 .white-title, .section-6 .white-title, .section-8 .white-title, .class-page-partners .white-title, .class-page-about .white-title, .about-section-4 .yellow-title, .about-section-2-title');
 }
 
 homeAnimationAdditional();

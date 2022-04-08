@@ -1,4 +1,3 @@
-
 function menuOpen() {
   menuOpenAnim();
 }
@@ -39,8 +38,47 @@ function menuInit() {
   document.querySelector('[data-close-menu]').addEventListener('click', () => menuClose(menu));
 }
 
+function formOpen() {
+  formOpenAnim();
+}
+
+function formClose() {
+  formCloseAnim();
+}
+
+function formOpenAnim(evt, reverseArg) {
+  const form = document.querySelector('[data-form]');
+  if (form === null) return;
+  const tl = gsap.timeline({ paused: true });
+  tl.add(() => {
+    form.classList.add('active');
+  });
+  tl.fromTo(form,{autoAlpha: 0},{autoAlpha: 1, duration: 0.4, clearProps: 'all' }, '<');
+  tl.play();
+}
+
+function formCloseAnim(evt, reverseArg) {
+  const form = document.querySelector('[data-form]');
+  if(form === null) return;
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo(form, {autoAlpha: 1},{autoAlpha: 0, duration: 0.4 }, '<');
+  tl.add(() => {
+    form.classList.remove('active');
+  });
+  tl.play();
+}
+
+function formInit() {
+  const form = document.querySelector('[data-form]');
+  document.querySelectorAll('[data-open-form]').forEach(el => {
+    el.addEventListener('click', () => formOpen(form));
+  });
+  document.querySelector('[data-close-form]').addEventListener('click', () => formClose(form));
+}
+
 function init() {
   menuInit();
+  formInit();
 }
 
 window.addEventListener('DOMContentLoaded', init);
