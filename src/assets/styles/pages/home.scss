@@ -76,6 +76,7 @@
     align-items: flex-end;
     justify-content: space-between;
     height: auto;
+    z-index: -1;
 
     @include to(768px) {
       align-items: stretch;
@@ -84,6 +85,8 @@
     .section-1-img1{
       width: 490px;
       height: 306px;
+      overflow: hidden;
+      z-index: -1;
 
       @include to(768px) {
         width: 254px;
@@ -98,12 +101,16 @@
       top: 50%;
       transform: translateY(-50%);
       filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.3));
+      overflow: hidden;
+      z-index: 0;
     }
 
     .section-1-img3{
       width: 530px;
       height: 313px;
       margin-right: var(--field);
+      overflow: hidden;
+      z-index: -1;
 
       @include to(768px) {
         width: 170px;
@@ -134,6 +141,10 @@
 }
 
 .section-3 {
+  .section-3-img-wrapper {
+    overflow: hidden;
+  }
+
   &-img {
     img.border-radius {
       object-fit: cover;
@@ -431,8 +442,10 @@
       align-items: stretch;
       justify-content: center;
 
-      transform: translateY(-50%);
-      transition: transform .5s ease-in-out;
+      @include to(768px) {
+        transform: translateY(-50%);
+        transition: transform .5s ease-in-out;
+      }
 
       .fag-card-text {
         justify-content: space-between;
@@ -613,7 +626,9 @@
   background: $mc;
 }
 
-.swiper-slide.faq-card.swiper-slide-active, .swiper-slide.faq-card.swiper-slide-prev {
-  transform: translateY(0);
-  transition: transform .5s ease-in-out;
+@include to(768px) {
+  .swiper-slide.faq-card.swiper-slide-active, .swiper-slide.faq-card.swiper-slide-prev {
+    transform: translateY(0);
+    transition: transform .5s ease-in-out;
+  }
 }

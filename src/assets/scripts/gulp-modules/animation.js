@@ -35,8 +35,8 @@ function homeAnimationAdditional() {
         })
         .fromTo(
           text.querySelectorAll('span>span'),
-          { yPercent: 100, start: 'top -100%', },
-          { yPercent: 0,  stagger: 0.1, duration: 2, end: 'top 100%', ease: 'power4.out' },
+          { yPercent: 100, start: '-100% top', },
+          { yPercent: 0,  stagger: 0.1, duration: 2, end: '100% top', ease: 'power4.out' },
         );
       addIntersectionOnceWithCallback(text, () => {
         tl.play();
@@ -45,6 +45,29 @@ function homeAnimationAdditional() {
   }
 
   splitToLinesAndFadeUp('.section-1-title, .section-1-text-block-top .white-text, .section-2 .white-title, .section-4 .white-title, .section-6 .white-title, .section-8 .white-title, .class-page-partners .white-title, .class-page-about .white-title, .about-section-4 .yellow-title, .about-section-2-title');
+
+  const paralaxImages = document.querySelectorAll('.section-1-img1 img, .section-1-img2 img,  .section-1-img3 img, .section-3-img-wrapper img, .section-9-img img');
+  paralaxImages.forEach((image) => {
+    let tl = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: image,
+        },
+      })
+      .fromTo(
+        image,
+        {
+          scale: 1.1,
+          y: 10,
+          transition: 1,
+        },
+        {
+          y: -10,
+          transition: 1,
+        },
+      );
+    return tl;
+  });
 }
 
 homeAnimationAdditional();
