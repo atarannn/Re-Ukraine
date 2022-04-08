@@ -143,3 +143,15 @@
   opacity: 1;
   visibility: visible;
 }
+
+.lang {
+  .white-text {
+    text-transform: uppercase;
+    font-size: var(--default-font-6);
+    cursor: pointer;
+  }
+
+  @include to(768px) {
+    margin-right: 30px;
+  }
+}
