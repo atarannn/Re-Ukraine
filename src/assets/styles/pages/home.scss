@@ -205,6 +205,13 @@
   position: relative;
   overflow: hidden;
 
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   @include to(768px){
     height: 150px;
     width: 150px;
@@ -324,8 +331,8 @@
           justify-content: center;
 
           @include to(768px) {
-            height: 37px;
-            width: 37px;
+            height: 42px;
+            width: 42px;
           }
         }
       }
