@@ -19,6 +19,7 @@ body {
 	line-height: 1.5em;
 	font-family: $default-font;
 	overflow-x: hidden;
+	-webkit-overflow-x: hidden;
 	font-size: 14px;
 	background: $bc;
 

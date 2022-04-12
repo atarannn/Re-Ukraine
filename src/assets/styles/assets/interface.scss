@@ -375,6 +375,7 @@ a {
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(11px);
+    -webkit-backdrop-filter:blur(11px);
     border-radius: 5px;
     padding: 40px;
 
@@ -413,4 +414,8 @@ a {
   @include to(768px) {
     margin-right: 20px;
   }
+}
+
+.swiper-wrapper {
+  overflow-x: hidden;
 }

@@ -201,6 +201,7 @@
   background-position: center;
   background-repeat: no-repeat;
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter:blur(18px);
   border-radius: 100px;
   position: relative;
   overflow: hidden;
@@ -242,6 +243,7 @@
     background-position: center;
     background-repeat: no-repeat;
     backdrop-filter: blur(21px);
+    -webkit-backdrop-filter:blur(21px);
     border-radius: 40px;
     background-size: cover;
 
@@ -439,6 +441,7 @@
       border: 1px solid #6B9CF0;
       filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.1));
       backdrop-filter: blur(21px);
+      -webkit-backdrop-filter:blur(21px);
       border-radius: 5px;
       position: relative;
       padding: 30px;
@@ -462,7 +465,7 @@
           font-size: var(--default-font-4);
           text-align: left;
           margin-bottom: 0;
-          width: 90%;
+          width: 95%;
         }
 
         .faq-card-icon {
@@ -494,6 +497,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        height: auto;
 
         .donate-btn {
           margin-top: 25px;
@@ -505,16 +509,19 @@
       border: 1px solid #6B9CF0;
       filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.1));
       backdrop-filter: blur(21px);
+      -webkit-backdrop-filter:blur(21px);
       border-radius: 5px;
       padding: 25px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: 112px;
 
       @include to(768px) {
         padding: 25px 20px;
         align-items: flex-end;
+        height: 118px;
 
         .donate-card-text {
           width: 80%;
