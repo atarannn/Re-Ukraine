@@ -22,10 +22,6 @@ body {
 	-webkit-overflow-x: hidden;
 	font-size: 14px;
 	background: $bc;
-
-	@include to(768px) {
-		background: #000;
-	}
 }
 
 body input, body textarea {

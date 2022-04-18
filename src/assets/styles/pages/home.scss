@@ -4,7 +4,7 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  margin-top: calc(var(--header-h) + 70px);
+  margin-top: calc(var(--header-h) + 50px);
 
   @include to(768px) {
     flex-direction: column-reverse;
@@ -36,9 +36,9 @@
       }
 
       .white-text {
-        margin: 40px 0;
+        margin: 20px 0 40px 0;
         font-size: 30px;
-        width: 80%;
+        width: 60%;
 
         @include to(768px) {
           font-size: 20px;
@@ -52,7 +52,7 @@
     }
 
     &-bottom {
-      margin-top: 175px;
+      margin-top: 150px;
       align-items: center;
       justify-content: flex-start;
 
@@ -454,11 +454,6 @@
       flex-direction: column;
       align-items: stretch;
       justify-content: center;
-
-      @include to(768px) {
-        transform: translateY(-50%);
-        transition: transform .5s ease-in-out;
-      }
 
       .fag-card-text {
         justify-content: space-between;

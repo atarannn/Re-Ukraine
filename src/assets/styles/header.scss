@@ -8,10 +8,6 @@
   height: var(--header-h);
   background: $bc;
 
-  @include to(768px) {
-    background: #000;
-  }
-
   align-content: center;
   align-items: center;
   justify-content: space-between;

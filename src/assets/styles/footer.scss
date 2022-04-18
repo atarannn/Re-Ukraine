@@ -45,6 +45,10 @@
       font-size: var(--default-font-6);
       text-align: left;
       margin-bottom: 35px;
+
+      @include to(768px) {
+        margin-bottom: 20px;
+      }
     }
 
     .btn-style {
@@ -61,6 +65,14 @@
     .footer-top-right-block {
       .block {
         margin-bottom: 60px;
+      }
+
+      .block.block-mob-1 {
+        &:last-child {
+          @include to(768px) {
+            margin-bottom: 100px;
+          }
+        }
       }
     }
 
@@ -116,6 +128,10 @@
     justify-content: space-between;
     margin: 20px 0 50px;
 
+    @include to(768px) {
+      margin: 20px 0 15px;
+    }
+
     &-left {
       align-items: center;
       justify-content: flex-start;
@@ -125,13 +141,11 @@
       }
 
       &-text {
-        @include regular-font(rgba(255, 255, 255, 0.4), var(--default-font-7));
+        @include regular-font2(rgba(255, 255, 255, 0.4), var(--default-font-7));
         margin-left: 60px;
 
         @include to(768px) {
           margin-left: 0;
-          margin-top: 40px;
-          margin-bottom: 11px;
         }
       }
     }
@@ -218,5 +232,28 @@
   .mob-img2 {
     height: 168px;
     width: 200px;
+  }
+}
+
+@include to(768px) {
+  .footer-bottom-mob {
+    width: 100%;
+    justify-content: space-between;
+
+    .col {
+      width: 70%;
+
+      .footer-bottom-left-text {
+        &:first-child {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .social-network {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 60px;
   }
 }
