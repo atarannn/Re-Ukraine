@@ -4,6 +4,7 @@
 	flex-direction: column;
 	z-index: 2;
   min-height: 100vh;
+  overflow-x: hidden;
 	.page__content {
 		flex-grow: 1;
 	}
@@ -141,8 +142,26 @@ a {
   }
 }
 
+.left-block40 {
+  width: 40%;
+  height: 100%;
+
+  @include to(768px) {
+    width: 100%;
+  }
+}
+
 .right-block70 {
   width: 70%;
+  height: 100%;
+
+  @include to(768px) {
+    width: 100%;
+  }
+}
+
+.right-block60 {
+  width: 65%;
   height: 100%;
 
   @include to(768px) {
@@ -176,12 +195,12 @@ a {
 }
 
 .yellow-title {
-  @include bold-font($mc2, var(--default-font-2));
+  @include bold-font2($mc2, var(--default-font-2));
   text-align: left;
 }
 
 .white-title {
-  @include bold-font($wc, var(--default-font-2));
+  @include bold-font2($wc, var(--default-font-2));
   text-align: left;
 }
 
@@ -309,7 +328,7 @@ a {
 }
 
 .regular-text {
-  @include regular-font($wc, var(--default-font-6));
+  @include regular-font2($wc, var(--default-font-6));
   text-align: right;
 
   @include to(768px) {
@@ -336,7 +355,7 @@ a {
 }
 
 .link {
-  color: $mc!important;
+  color: #96BDFF!important;
 }
 
 .footer-form {
@@ -414,8 +433,4 @@ a {
   @include to(768px) {
     margin-right: 20px;
   }
-}
-
-.swiper-wrapper {
-  overflow-x: hidden;
 }

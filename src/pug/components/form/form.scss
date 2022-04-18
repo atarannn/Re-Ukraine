@@ -62,6 +62,7 @@ form {
   }
 }
 .form-field__input {
+  font-family: $default-font4;
   width: 100%;
   font-size: var(--default-font-6);
   line-height: 120%;
@@ -369,7 +370,7 @@ form {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  @include regular-font($wc, 12px);
+  @include regular-font2($wc, 12px);
   padding: 3px 0 0 40px;
   width: 100%;
 

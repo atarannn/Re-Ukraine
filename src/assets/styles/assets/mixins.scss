@@ -59,7 +59,16 @@ $screen-height: 720;
 
 
 @mixin bold-font($color: $mc, $font-size: var(--default-font-1)) {
-	font-family: $default-font;
+	font-family: $default-font2;
+	font-weight: 700;
+	font-style: normal;
+	font-size: $font-size;
+	color: $color;
+	line-height: 130%;
+}
+
+@mixin bold-font2($color: $mc, $font-size: var(--default-font-1)) {
+	font-family: $default-font3;
 	font-weight: 700;
 	font-style: normal;
 	font-size: $font-size;
@@ -70,6 +79,15 @@ $screen-height: 720;
 @mixin regular-font($color: $mc, $font-size: var(--default-font-3)) {
 	font-family: $default-font;
 	font-weight: 400;
+	font-style: normal;
+	font-size: $font-size;
+	color: $color;
+	line-height: 130%;
+}
+
+@mixin regular-font2($color: $mc, $font-size: var(--default-font-3)) {
+	font-family: $default-font4;
+	font-weight: 300;
 	font-style: normal;
 	font-size: $font-size;
 	color: $color;

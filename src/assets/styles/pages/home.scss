@@ -30,8 +30,9 @@
       justify-content: space-between;
 
       .section-1-title {
-        @include bold-font($mc, var(--default-font-1));
+        @include bold-font2($mc, var(--default-font-1));
         text-align: left;
+        max-width: 70%;
       }
 
       .white-text {
@@ -262,7 +263,7 @@
       margin-bottom: 110px;
 
       .white-title {
-        width: 60%;
+        width: 70%;
       }
 
       @include to(768px) {
@@ -333,8 +334,8 @@
           justify-content: center;
 
           @include to(768px) {
-            height: 42px;
-            width: 42px;
+            height: 50px;
+            width: 50px;
           }
         }
       }
@@ -347,6 +348,7 @@
     background: linear-gradient(270deg, rgba(38, 49, 69, 0.18) 0%, rgba(31, 45, 69, 0.18) 103.5%);
     border-radius: 30px;
     margin-top: 30px;
+    overflow: hidden;
 
     .real-payment {
       position: absolute;
@@ -355,6 +357,7 @@
       height: 12px;
       width: 1%;
       background: $mc2;
+      border-radius: 30px;
     }
   }
 
@@ -463,9 +466,20 @@
 
         .bold-text {
           font-size: var(--default-font-4);
+          font-family: $default-font;
+          font-weight: 400;
           text-align: left;
           margin-bottom: 0;
           width: 95%;
+          height: 70px;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          @include to(768px) {
+            height: 50px;
+          }
         }
 
         .faq-card-icon {
@@ -538,7 +552,7 @@
       }
 
       .white-text {
-        @include bold-font($wc, var(--default-font-6));
+        @include regular-font($wc, var(--default-font-6));
         word-break: break-word;
       }
 

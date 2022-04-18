@@ -29,7 +29,9 @@ formsWithRedirect.forEach((form) => {
       elements: {
         $form,
         showSuccessMessage: false,
-        successAction: () => { window.location.href = 'message'; },
+        // successAction: () => {
+        //   window.location.href = 'message';
+        //   },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
           name: {
@@ -72,7 +74,29 @@ forms.forEach((form) => {
       elements: {
         $form,
         showSuccessMessage: false,
-        successAction: () => { window.location.href = 'message'; },
+        successAction: () => {
+          function formClose() {
+            formCloseAnim();
+          }
+
+          function formCloseAnim(evt, reverseArg) {
+            const form = document.querySelector('[data-form]');
+            if(form === null) return;
+            const tl = gsap.timeline({ paused: true });
+            tl.fromTo(form, {autoAlpha: 1},{autoAlpha: 0, duration: 0.4 }, '<');
+            tl.add(() => {
+              form.classList.remove('active');
+            });
+            tl.play();
+          }
+
+          function formInit() {
+            const form = document.querySelector('[data-form]');
+            formClose(form);
+          }
+
+          formInit();
+        },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
         fields: {
           name: {

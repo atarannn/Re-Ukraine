@@ -11,7 +11,7 @@
 
   background-color: #000000;
 
-  @include to(640px) {
+  @include to(768px) {
     height: 100%;
     min-height: -webkit-fill-available;
   }
@@ -21,7 +21,7 @@
   }
 
   &-wrapper {
-    padding: 40px var(--field) 50px;
+    padding: 40px var(--field);
 
     height: 100%;
     display: flex;
@@ -66,7 +66,7 @@
   }
 
   .header-btn {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .social-network {
@@ -93,7 +93,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 40px;
 
   li {
     margin-bottom: 30px;
