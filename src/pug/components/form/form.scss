@@ -200,12 +200,20 @@ form {
   .input-message {
     color: #fff;
   }
+
+  .form-checkbox span {
+    border: 1px solid $mc;
+  }
 }
 
 [data-field-input][data-status="field--active"]:not(#r) {
   border-color: $mc;
   .input-message {
     color: $mc;
+  }
+
+  .form-checkbox span {
+    border: 1px solid $mc;
   }
 }
 
@@ -214,12 +222,20 @@ form {
   .input-message {
     color: #F47070;
   }
+
+  .form-checkbox span {
+    border: 1px solid #F47070;
+  }
 }
 
 [data-field-input][data-status="field--success"]:not(#r) {
   border-color: #61CE70;
   .input-message {
     color: #61CE70;
+  }
+
+  .form-checkbox span {
+    border: 1px solid $mc;
   }
 }
 
@@ -410,6 +426,8 @@ form {
   background-color: $mc;
   transition: background-color .3s ease-in-out;
 }
+
+
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {

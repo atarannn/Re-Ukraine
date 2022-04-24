@@ -78,7 +78,6 @@ forms.forEach((form) => {
           function formClose() {
             formCloseAnim();
           }
-
           function formCloseAnim(evt, reverseArg) {
             const form = document.querySelector('[data-form]');
             if(form === null) return;
@@ -89,12 +88,10 @@ forms.forEach((form) => {
             });
             tl.play();
           }
-
           function formInit() {
             const form = document.querySelector('[data-form]');
             formClose(form);
           }
-
           formInit();
         },
         $btnSubmit: $form.querySelector('[data-btn-submit]'),
@@ -121,7 +118,6 @@ forms.forEach((form) => {
             error: [],
           },
         },
-
       },
     });
   }

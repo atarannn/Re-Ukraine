@@ -16,66 +16,11 @@ const lang = langDetect();
     lng: lang, // Текущий язык
     debug: true,
     resources: {
-      ru: {
-        // Тексты конкретного языка
-        translation: {
-          // Так называемый namespace по умолчанию
-          name: 'Имя:*',
-          phone: 'Телефон:*',
-          send: 'Отправить',
-          sending: 'Отправка',
-          field_too_short: 'телефон должен содержать не менее {{cnt}} символов',
-          field_too_long: 'телефон должен содержать не более {{cnt}} символов',
-          only_number: 'здесь только цифры',
-          onlyletters: 'Тут лише букви',
-          required: 'это поле обязательне',
-          sendingSuccessTitle: 'Cообщение отправлено',
-          sendingSuccessText: 'Ждите ответа наших менеджеров',
-          sendingErrorText: 'Ждите ответа наших менеджеров',
-          sendingErrorTitle: 'Ошибка',
-          send_fail: 'Сообщение не было отправлено за неизвестной ошибки сервера. Код: [send_fail]',
-          invalid_form:
-            'Сообщение не было отправлено за неизвестной ошибки сервера. Код: [invalid_form]',
-          front_error:
-            'Сообщение не было отправлено за неизвестной ошибки сервера. Код: [front_error]',
-          invalid_upload_file: 'Ошибка загрузки файла. Код: [invalid_upload_file]',
-          invalid_recaptcha: 'Заполните капчу и попробуйте еще раз снова. Код: [invalid_recaptcha]',
-          connectionFailed: 'Ошибка соединения с CRM',
-        },
-      },
-      uk: {
-        // Тексты конкретного языка
-        translation: {
-          // Так называемый namespace по умолчанию
-          name: 'Ім’я:*',
-          phone: 'Телефон:*',
-          send: 'Надіслати',
-          sending: 'Відправлення',
-          field_too_short: 'телефон має містити принаймні {{cnt}} символів',
-          field_too_long: 'телефон має містити не більше {{cnt}} символів',
-          only_number: 'тут лише цифри',
-          onlyletters: 'Тут лише букви',
-          required: 'Це поле є обов`язковим',
-          sendingSuccessTitle: 'Повідомлення надіслано',
-          sendingSuccessText: 'Чекайте відповіді наших менеджерів',
-          sendingErrorText: 'Чекайте відповіді наших менеджерів',
-
-          sendingErrorTitle: 'Сталася помилка',
-          send_fail:
-            'Повідомлення не було відправлено через невідому помилку сервера. Код: [send_fail] ',
-          invalid_form:
-            'Повідомлення не було відправлено через невідому помилку сервера. Код: [invalid_form] ',
-          front_error:
-            'Повідомлення не було відправлено через невідому помилку сервера. Код: [front_error] ',
-          invalid_upload_file: 'Помилка завантаження файлу. Код: [invalid_upload_file]',
-          invalid_recaptcha: 'Заповніть капчу і спробуйте ще раз знову. Код: [invalid_recaptcha]',
-          connectionFailed: 'Помилка з\'єднання с CRM',
-        },
-      },
       en: {
         // Тексты конкретного языка
         translation: {
           // Так называемый namespace по умолчанию
+          required: 'this field is required',
           name: 'Name:*',
           phone: 'Phone:*',
           send: 'Sand',
@@ -83,8 +28,6 @@ const lang = langDetect();
           field_too_short: 'phone must be at least {{cnt}} characters',
           field_too_long: 'phone must be at most {{cnt}} characters',
           only_number: 'only digits here',
-          onlyletters: 'only letters here',
-          required: 'this field is required',
           sendingSuccessTitle: 'Message sent',
           sendingSuccessText: 'Wait for the answers of our managers',
           sendingErrorText: 'Wait for the answers of our managers',
@@ -96,6 +39,33 @@ const lang = langDetect();
           invalid_upload_file: 'Error uploading file. Code: [invalid_upload_file] ',
           invalid_recaptcha: 'Please fill in the captcha and try again. Code: [invalid_recaptcha] ',
           connectionFailed: 'Server connection error',
+        },
+      },
+      uk: {
+        // Тексты конкретного языка
+        translation: {
+          // Так называемый namespace по умолчанию
+          required: 'це поле є обов`язковим',
+          name: 'Ім’я:*',
+          phone: 'Телефон:*',
+          send: 'Надіслати',
+          sending: 'Відправлення',
+          field_too_short: 'телефон має містити принаймні {{cnt}} символів',
+          field_too_long: 'телефон має містити не більше {{cnt}} символів',
+          only_number: 'тут лише цифри',
+          sendingSuccessTitle: 'Повідомлення надіслано',
+          sendingSuccessText: 'Чекайте відповіді наших менеджерів',
+          sendingErrorText: 'Чекайте відповіді наших менеджерів',
+          sendingErrorTitle: 'Сталася помилка',
+          send_fail:
+            'Повідомлення не було відправлено через невідому помилку сервера. Код: [send_fail] ',
+          invalid_form:
+            'Повідомлення не було відправлено через невідому помилку сервера. Код: [invalid_form] ',
+          front_error:
+            'Повідомлення не було відправлено через невідому помилку сервера. Код: [front_error] ',
+          invalid_upload_file: 'Помилка завантаження файлу. Код: [invalid_upload_file]',
+          invalid_recaptcha: 'Заповніть капчу і спробуйте ще раз знову. Код: [invalid_recaptcha]',
+          connectionFailed: 'Помилка з\'єднання с CRM',
         },
       },
     },
