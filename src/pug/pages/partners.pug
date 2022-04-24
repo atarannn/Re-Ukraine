@@ -1,0 +1,113 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'partners'
+    var id_page = 'id-page-partners'
+    var class_page = 'class-page-partners'
+
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/partners.js')
+  script(defer src='./assets/scripts/animation.js')
+block content
+  .margin-top
+    .field
+      h1.white-title Наші учасники
+      .section-margin-bottom
+        .country-filter
+          .country-filter-current
+            span.progress-filtter-year-text Україна
+            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.964 7.10801L14.4995 0.57251L15.4295 1.49951L8.426 8.50001H7.499L0.5 1.49951L1.4285 0.57251L7.964 7.10801Z" fill="#FFD801"/>
+            </svg>
+
+          .country-filter-dropdown
+            .country-filter-item(data-country="Ukraine") Україна
+            .country-filter-item(data-country="Italy") Італія
+            .country-filter-item(data-country="Poland") Польща
+
+        .section-partner
+          a(href="#").section-partner-card.first-partner-card
+            span Будь першим
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.active-partner-card
+            span Будь першим
+            img(src="assets/images/home/back/2-2.svg")
+            .active-partner-card-info
+              .bold-text(data-country) Країна
+              .regular-text(data-city) Місто
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+          a(href="#").section-partner-card.default-partner-card
+            img(src="assets/images/home/back/2-2.svg")
+    .section-margin-bottom.footer-form.relative
+      .row
+        .section-9-img
+          img(src="assets/images/footer/4.png").border-radius.mob-img1
+        .section-9-img
+          img(src="assets/images/footer/5.png").border-radius.mob-img2
+      .row.field.mob-footer-margin
+        .section-9-img
+          img(src="assets/images/footer/6.png").border-radius.mob-img2
+        .section-9-img
+          img(src="assets/images/footer/7.png").border-radius.mob-img1
+      .form
+        img(src="assets/images/vector-4.svg").uk-pattern-5
+        form(data-footer-contact autocomplete="off")
+          .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+            input(type='text' name="name" placeholder="Назва організації").form-field__input
+            //.form-field-message Назва організації
+            .input-message(data-input-message)
+
+          .form-field.form-field-input(data-field-input data-field-city data-status="field--inactive")
+            input(type='text' name="city" placeholder="Місто знаходження").form-field__input
+            //.form-field-message Місто знаходження
+            .input-message(data-input-message)
+
+          .form-field.form-field-input(data-field-input data-field-mail data-status="field--inactive")
+            input(type='text' name="mail" placeholder="E-mail").form-field__input
+            //.form-field-message E-mail
+            .input-message(data-input-message)
+
+          .form-checkbox__wrapper
+            label.form-checkbox Я прочитав(-ла) і приймаю
+              a(href="privacy.html").link Політика конфіденційності
+              input(type="checkbox" checked="checked")
+              span.checkmark
+
+          button( type="submit" data-btn-submit).btn-style
+            span(data-btn-submit-text).link__text.usn Приєднатися
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

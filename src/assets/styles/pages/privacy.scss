@@ -1,0 +1,67 @@
+.class-page-privacy {
+  .white-title {
+    font-size: 40px;
+
+    @include to(768px) {
+      font-size: 20px;
+    }
+  }
+
+  .btn-style {
+    width: fit-content;
+    padding: 0 20px;
+  }
+
+  .privacy-wrapper {
+    margin-top: 70px;
+    margin-bottom: 100px;
+
+    @include to(768px) {
+      margin: 60px 0;
+    }
+  }
+
+  .privacy-block {
+    margin-bottom: 50px;
+
+    &-title {
+      @include bold-font($mc, var(--default-font-4));
+      margin-bottom: 30px;
+
+      @include to(768px) {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-list {
+      @include regular-font2($wc, var(--default-font-5));
+
+      @include to(768px) {
+        font-size: 13px;
+      }
+
+      li {
+        .second-level {
+          padding-left: 20px;
+
+          @include to(768px) {
+            padding-left: 10px;
+          }
+        }
+      }
+
+      .link {
+        margin: 0 .5em;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include to(768px) {
+      margin-bottom: 40px;
+    }
+  }
+}
