@@ -6,7 +6,7 @@ form {
   font-weight: 400;
   font-size: 22px;
   line-height: 140%;
-  color: #CFA46E;
+  color: #cfa46e;
   @include to(1440px) {
     font-size: 16px;
   }
@@ -22,7 +22,7 @@ form {
   position: relative;
   margin: 45px 0 0;
   background: none;
-  border-bottom: 1px solid #0F1C32;
+  border-bottom: 1px solid #0f1c32;
   transition: all 0.3s;
 
   &:first-child {
@@ -34,7 +34,7 @@ form {
   }
 }
 
-[data-animation="focus"] .input-message {
+[data-animation='focus'] .input-message {
   position: absolute;
   top: 50%;
   left: var(--input-padding);
@@ -47,7 +47,7 @@ form {
   user-select: none;
   pointer-events: none;
   background-color: $light-grey;
-  transition: all 0.16s cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  transition: all 0.16s cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
 
 /*  */
@@ -85,7 +85,7 @@ form {
   font-family: $default-font;
   font-weight: 600;
   line-height: 1em;
-  color: #CFA46E;
+  color: #cfa46e;
   border: none;
   background: none;
   white-space: nowrap;
@@ -112,7 +112,7 @@ form {
     margin: 0 0 0 50px;
     svg {
       height: 100%;
-      fill: #CFA46E;
+      fill: #cfa46e;
     }
     @include to(1440px) {
       width: 50px;
@@ -137,7 +137,7 @@ form {
   width: 65px;
   height: 100%;
   z-index: 10;
-  background-color: #F47070;
+  background-color: #f47070;
   opacity: 0;
   @include to(1440px) {
     width: 45px;
@@ -147,7 +147,7 @@ form {
   }
 }
 
-[data-animation="focus"] .form-field__input {
+[data-animation='focus'] .form-field__input {
   position: absolute;
   top: 0;
   left: 0;
@@ -158,26 +158,26 @@ form {
   text-indent: var(--input-padding);
   background-color: transparent;
   border: none;
-  @include to(1440px){
+  @include to(1440px) {
     font-size: 14px;
   }
 }
-[data-animation="none"] .form-field__input {
+[data-animation='none'] .form-field__input {
   padding: 0;
   width: 100%;
   border: none;
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-width:1440px){
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
     font-size: vw(16);
   }
-  @include to(1440px){
+  @include to(1440px) {
     font-size: 20px;
   }
-  @include to(576px){
+  @include to(576px) {
     font-size: 14px;
   }
 }
 
-[data-animation="none"] .input-message {
+[data-animation='none'] .input-message {
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -192,11 +192,9 @@ form {
   @include to(576px) {
     font-size: 10px;
   }
-
 }
 
-
-[data-field-input][data-status="field--inactive"]:not(#r) {
+[data-field-input][data-status='field--inactive']:not(#r) {
   .input-message {
     color: #fff;
   }
@@ -206,7 +204,7 @@ form {
   }
 }
 
-[data-field-input][data-status="field--active"]:not(#r) {
+[data-field-input][data-status='field--active']:not(#r) {
   border-color: $mc;
   .input-message {
     color: $mc;
@@ -217,21 +215,21 @@ form {
   }
 }
 
-[data-field-input][data-status="field--error"]:not(#r) {
-  border-color: #F47070;
+[data-field-input][data-status='field--error']:not(#r) {
+  border-color: #f47070;
   .input-message {
-    color: #F47070;
+    color: #f47070;
   }
 
   .form-checkbox span {
-    border: 1px solid #F47070;
+    border: 1px solid #f47070;
   }
 }
 
-[data-field-input][data-status="field--success"]:not(#r) {
-  border-color: #61CE70;
+[data-field-input][data-status='field--success']:not(#r) {
+  border-color: #61ce70;
   .input-message {
-    color: #61CE70;
+    color: #61ce70;
   }
 
   .form-checkbox span {
@@ -248,7 +246,6 @@ form {
 * input end
 */
 /**********************************/
-
 
 .requaired-block {
   &-ico {
@@ -278,16 +275,14 @@ form {
     margin: 0px vw(18);
     white-space: nowrap;
 
-    color: #BBBEC2;
-    @media (-webkit-min-device-pixel-ratio: 2) and (min-width:1440px){
+    color: #bbbec2;
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
       font-size: vw(16);
       line-height: 1.4em;
-
     }
-    @include to(1440px){
+    @include to(1440px) {
       font-size: 12px;
       margin: 0px 15px;
-
     }
   }
 }
@@ -295,13 +290,13 @@ form {
 .form-textarea {
   position: relative;
   margin: 82px 0 0 0;
-  @include to(1440px){
+  @include to(1440px) {
     margin: 40px 0 0 0;
   }
-  @include to(992px){
+  @include to(992px) {
     margin: 50px 0 0 0;
   }
-  @include to(576px){
+  @include to(576px) {
     margin: 30px 0 0 0;
   }
   textarea {
@@ -312,23 +307,23 @@ form {
     background: none;
     font-size: 28px;
     line-height: 100%;
-    color: #FFFFFF;
+    color: #ffffff;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    @media (-webkit-min-device-pixel-ratio: 2) and (min-width:1440px){
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
       font-size: vw(28);
     }
-    @include to(1440px){
+    @include to(1440px) {
       height: 73px;
       font-size: 20px;
       line-height: 120%;
     }
-    @include to(992px){
+    @include to(992px) {
       height: 134px;
       font-size: 24px;
       line-height: 140%;
     }
-    @include to(576px){
+    @include to(576px) {
       height: 74px;
       font-size: 14px;
       line-height: 100%;
@@ -351,14 +346,14 @@ form {
   color: #828282;
   transform: translateY(calc(-100% - 10px));
   //margin: 10px 0 0 0;
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-width:1440px) {
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
     font-size: vw(16);
   }
   @include to(1440px) {
     //margin: 10px 0 0 0;
     font-size: 12px;
   }
-  @include to(576px){
+  @include to(576px) {
     font-size: 14px;
   }
 }
@@ -370,8 +365,7 @@ form {
   pointer-events: none;
 }
 
-
-.form-checkbox__wrapper{
+.form-checkbox__wrapper {
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -418,20 +412,18 @@ form {
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid $mc;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* When the checkbox is checked, add a blue background */
 .form-checkbox input:checked ~ .checkmark {
   background-color: $mc;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
-
-
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -450,4 +442,9 @@ form {
   border: solid $wc;
   transform: translate(-50%, -50%) rotate(45deg);
   border-width: 0 3px 3px 0;
+}
+
+.btn-disabled {
+  background-color: #3d567f;
+  pointer-events: none;
 }

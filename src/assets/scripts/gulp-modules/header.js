@@ -14,18 +14,18 @@ function menuOpenAnim(evt, reverseArg) {
   tl.add(() => {
     menu.classList.add('active');
   });
-  tl.fromTo(menu,{x: 700},{x: 0, duration: 0.5, clearProps: 'all' }, '<');
-  tl.fromTo(menuClose, {autoAlpha: 0},{autoAlpha: 1, delay: 0.5, duration: 0.5 }, '<');
+  tl.fromTo(menu, { x: 700 }, { x: 0, duration: 0.5, clearProps: 'all' }, '<');
+  tl.fromTo(menuClose, { autoAlpha: 0 }, { autoAlpha: 1, delay: 0.5, duration: 0.5 }, '<');
   tl.play();
 }
 
 function menuCloseAnim(evt, reverseArg) {
   const menu = document.querySelector('[data-menu]');
   const menuClose = document.querySelector('[data-close-menu]');
-  if(menu === null) return;
+  if (menu === null) return;
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo(menuClose, {autoAlpha: 1},{autoAlpha: 0, duration: 0.5 }, '<');
-  tl.fromTo(menu, {x: 0},{x: 700, delay: 0.5, duration: 0.5 }, '<');
+  tl.fromTo(menuClose, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.5 }, '<');
+  tl.fromTo(menu, { x: 0 }, { x: 700, delay: 0.5, duration: 0.5 }, '<');
   tl.add(() => {
     menu.classList.remove('active');
   });
@@ -53,15 +53,15 @@ function formOpenAnim(evt, reverseArg) {
   tl.add(() => {
     form.classList.add('active');
   });
-  tl.fromTo(form,{autoAlpha: 0},{autoAlpha: 1, duration: 0.4, clearProps: 'all' }, '<');
+  tl.fromTo(form, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, clearProps: 'all' }, '<');
   tl.play();
 }
 
 function formCloseAnim(evt, reverseArg) {
   const form = document.querySelector('[data-form]');
-  if(form === null) return;
+  if (form === null) return;
   const tl = gsap.timeline({ paused: true });
-  tl.fromTo(form, {autoAlpha: 1},{autoAlpha: 0, duration: 0.4 }, '<');
+  tl.fromTo(form, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.4 }, '<');
   tl.add(() => {
     form.classList.remove('active');
   });
